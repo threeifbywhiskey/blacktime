@@ -3,11 +3,12 @@
 #include <string.h>
 
 const char *ops = "push copy slidelabelcall jump jz   jn   pop  dup  swap add  "
-                  "sub  mul  div  mod  storeload ret  exit ichr inum ochr onum ";
-const char *trans[] = {"  ", " \t ", " \t\n", "\n  ", "\n \t", "\n \n", "\n\t ",
-                       "\n\t\t", " \n\n", " \n ", " \n\t", "\t   ", "\t  \t",
-                       "\t  \n", "\t \t ", "\t \t\t", "\t\t ", "\t\t\t", "\n\t\n",
-                       "\n\n\n", "\t\n\t ", "\t\n\t\t", "\t\n  ", "\t\n \t"};
+                  "sub  mul  div  mod  storeload ret  ichr inum ochr onum exit ";
+const char *trans[] = {
+	"  ", " \t ", " \t\n", "\n  ", "\n \t", "\n \n", "\n\t ", "\n\t\t", " \n\n",
+	" \n ", " \n\t", "\t   ", "\t  \t", "\t  \n", "\t \t ", "\t \t\t", "\t\t ",
+	"\t\t\t", "\n\t\n", "\t\n\t ", "\t\n\t\t", "\t\n  ", "\t\n \t", "\n\n\n"
+};
 
 void encode(int num, char *buf)
 {
