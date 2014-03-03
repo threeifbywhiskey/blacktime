@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 	char encoded[33] = {0};
 
 	if (argc < 2)
-		return fprintf(stderr, "Usage: %s FILE", *argv);
+		return fprintf(stderr, "Usage: %s FILE\n", *argv);
 
 	in = fopen(argv[1], "r");
 
