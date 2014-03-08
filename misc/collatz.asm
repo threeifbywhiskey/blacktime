@@ -11,4 +11,5 @@ push 0 dup inum load      ; Read and load a number.
     push 2 div jump 0     ; Divide by 2 and go again.
 
 2:
+    pop
     push 10 ochr exit     ; Print a newline and exit.
